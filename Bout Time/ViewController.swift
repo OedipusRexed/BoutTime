@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
+    
+    var timer = Timer()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
