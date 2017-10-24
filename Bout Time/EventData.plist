@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Event</key>
+		<string>Yuri Gagarin becomes the first man in space.</string>
+		<key>Year</key>
+		<string>1961</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/people/astronauts/gagarin.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First non crash landings on the Moons by Luna 9 (Russian) and Surveyor I (U.S.A.)</string>
+		<key>Year</key>
+		<string>1966</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/unmanned_table.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Armstrong and Aldrin walk on the Moon as part of Apollo 11 mission.</string>
+		<key>Year</key>
+		<string>1969</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/apollo11.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>The Russian Venera 7 becomes first to land softly on the surface of Venus.</string>
+		<key>Year</key>
+		<string>1970</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/venera.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>The U.S. launches Pioneer 10, the first satellite destined for Jupiter.The U.S. launches Pioneer 10, the first satellite destined for Jupiter.</string>
+		<key>Year</key>
+		<string>1972</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/pioneer.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>The U.S. Mariner 10 probe transmits the first image of Mercury.</string>
+		<key>Year</key>
+		<string>1974</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/mariner10.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>The U.S. Viking probes land on Mars.</string>
+		<key>Year</key>
+		<string>1976</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/viking.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Discovery of Uranus&apos; rings</string>
+		<key>Year</key>
+		<string>1977</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/uranus/discover.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>U.S. Voyager 1 sends back first images of Saturn and its rings to Earth.</string>
+		<key>Year</key>
+		<string>1980</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/voyager.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Hubble Space Telescope put into orbit from space shuttle Discovery.</string>
+		<key>Year</key>
+		<string>1990</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/HST.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Galileo space probe reaches Jupiter.</string>
+		<key>Year</key>
+		<string>1995</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/space_missions/galileo.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Mars Pathfinder lands on the Red Planet.</string>
+		<key>Year</key>
+		<string>1997</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/headline_universe/path.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Cassini begins its journey to Saturn.</string>
+		<key>Year</key>
+		<string>1997</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/headline_universe/cass.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Construction begins on the International Space Station.</string>
+		<key>Year</key>
+		<string>1998</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/headline_universe/iss.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Scientists discover the real Hubble Constant!</string>
+		<key>Year</key>
+		<string>1999</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/headline_universe/hubble_constant.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Chandra X-ray Observatory is put into orbit. Col. Eileen Collins becomes first woman shuttle commander.</string>
+		<key>Year</key>
+		<string>1999</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/headline_universe/chandra_launch.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>New evidence found for water on Mars.</string>
+		<key>Year</key>
+		<string>2000</string>
+		<key>URL</key>
+		<string>https://www.windows2universe.org/headline_universe/marswater.html</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First landing on an asteroid </string>
+		<key>Year</key>
+		<string>2001</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First orbit of Saturn	</string>
+		<key>Year</key>
+		<string>2004</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First asteroid ascent</string>
+		<key>Year</key>
+		<string>2005</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Kepler Mission is launched, first space telescope designated to search for Earth-like exoplanets[</string>
+		<key>Year</key>
+		<string>2009</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First orbit of Mercury</string>
+		<key>Year</key>
+		<string>2011</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First lunar rover	</string>
+		<key>Year</key>
+		<string>1970</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>Confirmed the existence of the Van Allen belts	</string>
+		<key>Year</key>
+		<string>1958</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+	<dict>
+		<key>Event</key>
+		<string>First photograph of Earth from orbit</string>
+		<key>Year</key>
+		<string>1959</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_space_exploration#1981.E2.80.93present</string>
+	</dict>
+</array>
+</plist>
