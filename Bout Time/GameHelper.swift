@@ -15,6 +15,21 @@ var initialEventArray: [EventData] = []
 
 
 
+// Default game settings
+let roundsPerGame = 6
+var roundsPlayed = 0
+var correctAnswers = 0
+var correctOrder = false
+
+var firstYear = ""
+var secondYear = ""
+var thirdYear = ""
+var fourthYear = ""
+
+var firstURL = ""
+var secondURL = ""
+var thirdURL = ""
+var fourthURL = ""
 
 
 

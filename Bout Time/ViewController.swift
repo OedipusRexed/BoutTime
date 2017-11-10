@@ -12,16 +12,17 @@ import GameKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var FirstEventLabel: UILabel!
+    
+    @IBOutlet weak var FirstEventButton: UIButton!
     @IBOutlet weak var FirstDownButton: UIButton!
-    @IBOutlet weak var SecondEventLabel: UILabel!
+    @IBOutlet weak var SecondEventButton: UIButton!
     @IBOutlet weak var SecondUpButton: UIButton!
     @IBOutlet weak var SecondDownButton: UIButton!
-    @IBOutlet weak var ThirdEventLabel: UILabel!
+    @IBOutlet weak var ThirdEventButton: UIButton!
     @IBOutlet weak var ThirdUpButton: UIButton!
     @IBOutlet weak var ThirdDownButton: UIButton!
     @IBOutlet weak var StartGameButton: UIButton!
-    @IBOutlet weak var FourthEventLabel: UILabel!
+    @IBOutlet weak var FourthEventButton: UIButton!
     @IBOutlet weak var FourthUpButton: UIButton!
     @IBOutlet weak var NextRoundSuccessButton: UIButton!
     @IBOutlet weak var NextRoundFailButton: UIButton!
@@ -37,10 +38,10 @@ class ViewController: UIViewController {
         
         CountdownTimer.text = String(60)
         
-        FirstEventLabel.isHidden = true
-        SecondEventLabel.isHidden = true
-        ThirdEventLabel.isHidden = true
-        FourthEventLabel.isHidden = true
+        FirstEventButton.isHidden = true
+        SecondEventButton.isHidden = true
+        ThirdEventButton.isHidden = true
+        FourthEventButton.isHidden = true
         StartGameButton.isHidden = false
         FirstDownButton.isHidden = true
         SecondDownButton.isHidden = true
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         do {
             let eventData = try PlistConverter.arrayFromList(fromFile: "EventData", ofType: "plist")
-            let eventArray = try EventUnpacker.eventfromArray(array: eventData)
+            let eventArray = try EventUnpacker.eventFromArray(array: eventData)
             
             self.event = eventArray
         } catch let error {
@@ -109,10 +110,10 @@ class ViewController: UIViewController {
     
     @IBAction func StartGame(_ sender: UIButton) {
         
-        FirstEventLabel.isHidden = false
-        SecondEventLabel.isHidden = false
-        ThirdEventLabel.isHidden = false
-        FourthEventLabel.isHidden = false
+        FirstEventButton.isHidden = false
+        SecondEventButton.isHidden = false
+        ThirdEventButton.isHidden = false
+        FourthEventButton.isHidden = false
         StartGameButton.isHidden = true
         FirstDownButton.isHidden = false
         SecondDownButton.isHidden = false
@@ -130,6 +131,48 @@ class ViewController: UIViewController {
         startTimer()
 
     }
+    
+    func assignEventLabels() {
+    
+        func assignTopButton() {
+            randomizeEvent()
+            FirstEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
+            firstURL = initialEventArray[indexOfSelectedEvent].URL
+            firstYear = initialEventArray[indexOfSelectedEvent].Year
+            transferUsedEvent()
+        }
+    
+        func assignMidTopButton() {
+            randomizeEvent()
+            SecondEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
+            secondURL = initialEventArray[indexOfSelectedEvent].URL
+            secondYear = initialEventArray[indexOfSelectedEvent].Year
+            transferUsedEvent()
+        }
+        
+        func assignMidBotButton() {
+            randomizeEvent()
+            ThirdEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
+            thirdURL = initialEventArray[indexOfSelectedEvent].URL
+            thirdYear = initialEventArray[indexOfSelectedEvent].Year
+            transferUsedEvent()
+        }
+    
+        func assignBottomButton() {
+            randomizeEvent()
+            FourthEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
+            fourthURL = initialEventArray[indexOfSelectedEvent].URL
+            fourthYear = initialEventArray[indexOfSelectedEvent].Year
+            transferUsedEvent()
+        }
+    
+    assignTopButton()
+    assignMidTopButton()
+    assignMidBotButton()
+    assignBottomButton()
+    
+    }
+
 
     
 // functions for event lists
@@ -145,19 +188,54 @@ class ViewController: UIViewController {
         initialEventArray.remove(at: indexOfSelectedEvent)
     }
     
+    func resetEventArray() {
+        usedEventArray.removeAll()
+        initialEventArray.append(contentsOf: usedEventArray)
+    }
+
+// MARK: Activating/Deactivating Buttons and Arrows
     
+    func disableArrows() {
+        FirstDownButton.isEnabled = false
+        SecondUpButton.isEnabled = false
+        SecondDownButton.isEnabled = false
+        ThirdUpButton.isEnabled = false
+        ThirdDownButton.isEnabled = false
+        FourthUpButton.isEnabled = false
+        
+    }
     
+    func enableArrows() {
+        FirstDownButton.isEnabled = true
+        SecondUpButton.isEnabled = true
+        SecondDownButton.isEnabled = true
+        ThirdUpButton.isEnabled = true
+        ThirdDownButton.isEnabled = true
+        FourthUpButton.isEnabled = true
+    }
     
+    func disableButtons() {
+        FirstEventButton.isEnabled = false
+        SecondEventButton.isEnabled = false
+        ThirdEventButton.isEnabled = false
+        FourthEventButton.isEnabled = false
+    }
     
-    
-    
+    func enableButtons() {
+        FirstEventButton.isEnabled = true
+        SecondEventButton.isEnabled = true
+        ThirdEventButton.isEnabled = true
+        FourthEventButton.isEnabled = true
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-
-
-
-
-
-
-
