@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var ThirdEventButton: UIButton!
     @IBOutlet weak var ThirdUpButton: UIButton!
     @IBOutlet weak var ThirdDownButton: UIButton!
-    @IBOutlet weak var StartGameButton: UIButton!
     @IBOutlet weak var FourthEventButton: UIButton!
     @IBOutlet weak var FourthUpButton: UIButton!
     @IBOutlet weak var NextRoundSuccessButton: UIButton!
@@ -37,22 +36,11 @@ class ViewController: UIViewController {
 
         
         CountdownTimer.text = String(60)
+        TapOrShakeLabel.text = "Shake To Complete!"
         
-        FirstEventButton.isHidden = true
-        SecondEventButton.isHidden = true
-        ThirdEventButton.isHidden = true
-        FourthEventButton.isHidden = true
-        StartGameButton.isHidden = false
-        FirstDownButton.isHidden = true
-        SecondDownButton.isHidden = true
-        SecondUpButton.isHidden = true
-        ThirdDownButton.isHidden = true
-        ThirdUpButton.isHidden = true
-        FourthUpButton.isHidden = true
-        CountdownTimer.isHidden = true
-        TapOrShakeLabel.isHidden = true
-        NextRoundSuccessButton.isHidden = true
-        NextRoundFailButton.isHidden = true
+        startTimer()
+        assignEventLabels()
+        
         
     }
 
@@ -75,7 +63,60 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
 
+    // MARK: Shake gesture to skip timer or show next round
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            if isTimerRunning == true {
+                checkAnswer()
+            } else if isTimerRunning == false {
+                nextRound(UIEventSubtype.motionShake)
+            }
+        }
+    }
     
+    // MARK: Navigates to each additional view with correct link or score
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "scoreSegue" {
+            let scoreViewController = segue.destination as? EndGameScoreController
+            if let svc = scoreViewController {
+                svc.score = correctAnswers
+            }
+        }
+        
+        // Allows ScoreController to restart game when dismissed
+        if let destination = segue.destination as? EndGameScoreController {
+            destination.delegate = self
+        }
+        
+        if segue.identifier == "firstWebSegue" {
+            let webViewController = segue.destination as? WebController
+            if let wvc = webViewController {
+                wvc.clickedFirst = URL(string: firstURL)
+            }
+        }
+        
+        if segue.identifier == "secondWebSegue" {
+            let webViewController = segue.destination as? WebController
+            if let wvc = webViewController {
+                wvc.clickedSecond = URL(string: secondURL)
+            }
+        }
+        
+        if segue.identifier == "midBotWebSegue" {
+            let webViewController = segue.destination as? WebController
+            if let wvc = webViewController {
+                wvc.clickedThird = URL(string: thirdURL)
+            }
+        }
+        
+        if segue.identifier == "botWebSegue" {
+            let webViewController = segue.destination as? WebController
+            if let wvc = webViewController {
+                wvc.clickedFourth = URL(string: fourthURL)
+            }
+        }
+    }
+
     // MARK: Timer Functionality
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
@@ -108,29 +149,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func StartGame(_ sender: UIButton) {
-        
-        FirstEventButton.isHidden = false
-        SecondEventButton.isHidden = false
-        ThirdEventButton.isHidden = false
-        FourthEventButton.isHidden = false
-        StartGameButton.isHidden = true
-        FirstDownButton.isHidden = false
-        SecondDownButton.isHidden = false
-        SecondUpButton.isHidden = false
-        ThirdDownButton.isHidden = false
-        ThirdUpButton.isHidden = false
-        FourthUpButton.isHidden = false
-        CountdownTimer.isHidden = false
-        TapOrShakeLabel.isHidden = false
-        NextRoundSuccessButton.isHidden = true
-        NextRoundFailButton.isHidden = true
-        
-        TapOrShakeLabel.text = "Shake To Complete!"
-        
-        startTimer()
-
-    }
+   
     
     func assignEventLabels() {
     

@@ -13,10 +13,12 @@
 		6B08839B1F95610F003DB3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B08839A1F95610F003DB3BC /* Assets.xcassets */; };
 		6B08839E1F95610F003DB3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B08839C1F95610F003DB3BC /* LaunchScreen.storyboard */; };
 		6BB843B11F9AF66B0053671C /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB843B01F9AF66B0053671C /* TimerHelper.swift */; };
-		6BB843B31F9AFED80053671C /* EventData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BB843B21F9AFED80053671C /* EventData.plist */; };
 		6BB843B71F9D32040053671C /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB843B61F9D32040053671C /* AudioHelper.swift */; };
 		6BB843B91F9D73F60053671C /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB843B81F9D73F60053671C /* GameHelper.swift */; };
 		6BB843BB1FA2398C0053671C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB843BA1FA2398C0053671C /* GameModel.swift */; };
+		6BB843E01FB7A59F0053671C /* EventData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BB843B21F9AFED80053671C /* EventData.plist */; };
+		6BB844001FB969810053671C /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB843FF1FB969810053671C /* WebController.swift */; };
+		6BB844021FB969990053671C /* EndGameScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB844011FB969990053671C /* EndGameScoreController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		6BB843B61F9D32040053671C /* AudioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		6BB843B81F9D73F60053671C /* GameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		6BB843BA1FA2398C0053671C /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameModel.swift; path = ../GameModel.swift; sourceTree = "<group>"; };
+		6BB843FF1FB969810053671C /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
+		6BB844011FB969990053671C /* EndGameScoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameScoreController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 			children = (
 				6B0883931F95610E003DB3BC /* AppDelegate.swift */,
 				6B0883951F95610E003DB3BC /* ViewController.swift */,
+				6BB843FF1FB969810053671C /* WebController.swift */,
+				6BB844011FB969990053671C /* EndGameScoreController.swift */,
 				6BB843B81F9D73F60053671C /* GameHelper.swift */,
 				6BB843BA1FA2398C0053671C /* GameModel.swift */,
 				6BB843B01F9AF66B0053671C /* TimerHelper.swift */,
@@ -140,7 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B08839E1F95610F003DB3BC /* LaunchScreen.storyboard in Resources */,
-				6BB843B31F9AFED80053671C /* EventData.plist in Resources */,
+				6BB843E01FB7A59F0053671C /* EventData.plist in Resources */,
 				6B08839B1F95610F003DB3BC /* Assets.xcassets in Resources */,
 				6B0883991F95610F003DB3BC /* Main.storyboard in Resources */,
 			);
@@ -153,9 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB844021FB969990053671C /* EndGameScoreController.swift in Sources */,
 				6BB843B11F9AF66B0053671C /* TimerHelper.swift in Sources */,
 				6B0883961F95610E003DB3BC /* ViewController.swift in Sources */,
 				6B0883941F95610E003DB3BC /* AppDelegate.swift in Sources */,
+				6BB844001FB969810053671C /* WebController.swift in Sources */,
 				6BB843B71F9D32040053671C /* AudioHelper.swift in Sources */,
 				6BB843B91F9D73F60053671C /* GameHelper.swift in Sources */,
 				6BB843BB1FA2398C0053671C /* GameModel.swift in Sources */,

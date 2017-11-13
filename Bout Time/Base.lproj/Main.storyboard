@@ -36,9 +36,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="firstEvent">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qf5-0x-EBM" kind="popoverPresentation" identifier="firstWebSegue" popoverAnchorView="Xxt-fK-Qxu" id="EuL-46-qqj">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -66,9 +71,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="secondEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qf5-0x-EBM" kind="popoverPresentation" identifier="secondWebSegue" popoverAnchorView="ARd-Nc-wbu" id="GFB-wV-Z1M">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -85,9 +95,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="thirdEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qf5-0x-EBM" kind="popoverPresentation" identifier="thirdWebSegue" popoverAnchorView="LeG-aA-eor" id="UBB-bG-5Gp">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-QR-prr" userLabel="ThirdUpButton">
                                         <rect key="frame" x="298" y="0.0" width="40" height="58"/>
@@ -103,27 +118,12 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="down_half"/>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kg-V8-pTQ" userLabel="StartGameButton">
-                                        <rect key="frame" x="35" y="8" width="269" height="99"/>
-                                        <color key="backgroundColor" red="0.44022905829999998" green="0.84075796599999997" blue="0.11191917210000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                        <state key="normal" title="Start Game">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="StartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZ6-WO-lW0"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8xH-QR-prr" secondAttribute="trailing" id="2j7-pJ-g0a"/>
                                     <constraint firstItem="fuk-gC-pHg" firstAttribute="top" secondItem="8xH-QR-prr" secondAttribute="bottom" id="7Q7-1L-lbb"/>
-                                    <constraint firstAttribute="bottom" secondItem="6kg-V8-pTQ" secondAttribute="bottom" constant="8" id="8RP-07-XEn"/>
-                                    <constraint firstItem="6kg-V8-pTQ" firstAttribute="top" secondItem="YTV-E0-pr9" secondAttribute="top" constant="8" id="DQ5-uR-3TN"/>
-                                    <constraint firstAttribute="trailing" secondItem="6kg-V8-pTQ" secondAttribute="trailing" constant="34" id="KQT-or-Ilz"/>
                                     <constraint firstItem="8xH-QR-prr" firstAttribute="leading" secondItem="fuk-gC-pHg" secondAttribute="leading" id="Kqz-SH-D3O"/>
                                     <constraint firstItem="8xH-QR-prr" firstAttribute="trailing" secondItem="fuk-gC-pHg" secondAttribute="trailing" id="eKY-sj-vIe"/>
-                                    <constraint firstItem="6kg-V8-pTQ" firstAttribute="leading" secondItem="YTV-E0-pr9" secondAttribute="leading" constant="35" id="u8K-fo-5dy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-m0-Dbr" userLabel="FourthSection">
@@ -140,9 +140,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="fourthEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qf5-0x-EBM" kind="popoverPresentation" identifier="fourthWebSegue" popoverAnchorView="nsM-lJ-q8g" id="sDp-Li-5EN">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -225,10 +230,8 @@
                         <outlet property="NextRoundFailButton" destination="Vy9-yA-LrJ" id="HfQ-00-t2h"/>
                         <outlet property="NextRoundSuccessButton" destination="PZF-gX-zqG" id="Tyw-7X-V3u"/>
                         <outlet property="SecondDownButton" destination="qTZ-ue-PyX" id="sni-Sb-ad9"/>
-                        <outlet property="SecondEventButton" destination="ARd-Nc-wbu" id="uUl-HV-Bqz"/>
-                        <outlet property="SecondEventLabel" destination="ARd-Nc-wbu" id="d5a-SQ-oJB"/>
+                        <outlet property="SecondEventButton" destination="ARd-Nc-wbu" id="QXL-ex-pou"/>
                         <outlet property="SecondUpButton" destination="yC7-NF-ZpQ" id="C0g-VG-tzK"/>
-                        <outlet property="StartGameButton" destination="6kg-V8-pTQ" id="0cd-Qe-iWo"/>
                         <outlet property="TapOrShakeLabel" destination="UI3-6y-Ka4" id="M5p-Ck-bYS"/>
                         <outlet property="ThirdDownButton" destination="fuk-gC-pHg" id="s6F-H4-VBF"/>
                         <outlet property="ThirdEventButton" destination="LeG-aA-eor" id="y8D-B8-zXH"/>
@@ -237,7 +240,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="-518" y="40"/>
+        </scene>
+        <!--Web Controller-->
+        <scene sceneID="FBk-Pc-XCf">
+            <objects>
+                <viewController id="qf5-0x-EBM" customClass="WebController" customModule="Bout_Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sxb-hd-W5n"/>
+                        <viewControllerLayoutGuide type="bottom" id="2tk-Pc-peY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KS7-ZL-IET">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-Du-Uag">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tz6-nW-uNS">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAq-zW-ktc">
+                                                <rect key="frame" x="8" y="8" width="327" height="49"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70451319217681885" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="27"/>
+                                                <state key="normal" title="Return To Questions">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dismiss:" destination="qf5-0x-EBM" eventType="touchUpInside" id="oaL-7X-EpY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ZAq-zW-ktc" firstAttribute="leading" secondItem="Tz6-nW-uNS" secondAttribute="leadingMargin" id="AdP-ww-eg1"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ZAq-zW-ktc" secondAttribute="bottom" id="Oct-5c-eyk"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ZAq-zW-ktc" secondAttribute="trailing" id="fV5-ow-eVg"/>
+                                            <constraint firstItem="ZAq-zW-ktc" firstAttribute="top" secondItem="Tz6-nW-uNS" secondAttribute="topMargin" id="lzF-cz-Ys9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hG-db-Faw">
+                                        <rect key="frame" x="0.0" y="65" width="343" height="602"/>
+                                        <subviews>
+                                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-7n-Bdm">
+                                                <rect key="frame" x="8" y="8" width="327" height="586"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </webView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Zud-7n-Bdm" secondAttribute="trailing" id="7Jf-EQ-Cr4"/>
+                                            <constraint firstItem="Zud-7n-Bdm" firstAttribute="leading" secondItem="7hG-db-Faw" secondAttribute="leadingMargin" id="BEF-id-OpP"/>
+                                            <constraint firstItem="Zud-7n-Bdm" firstAttribute="top" secondItem="7hG-db-Faw" secondAttribute="topMargin" id="Mem-AU-AoO"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Zud-7n-Bdm" secondAttribute="bottom" id="iud-cC-9a5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7hG-db-Faw" secondAttribute="bottom" id="8yb-pO-mrF"/>
+                                    <constraint firstItem="7hG-db-Faw" firstAttribute="top" secondItem="Tz6-nW-uNS" secondAttribute="bottom" id="I25-io-aoy"/>
+                                    <constraint firstItem="7hG-db-Faw" firstAttribute="top" secondItem="Tz6-nW-uNS" secondAttribute="bottom" id="Jz4-2T-E7G"/>
+                                    <constraint firstItem="7hG-db-Faw" firstAttribute="leading" secondItem="UKf-Du-Uag" secondAttribute="leading" id="Qqu-u1-3nP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tz6-nW-uNS" secondAttribute="trailing" id="R4I-yg-rlb"/>
+                                    <constraint firstAttribute="trailing" secondItem="7hG-db-Faw" secondAttribute="trailing" id="RBF-U3-h2i"/>
+                                    <constraint firstItem="Tz6-nW-uNS" firstAttribute="top" secondItem="UKf-Du-Uag" secondAttribute="top" id="Zbc-m5-gog"/>
+                                    <constraint firstItem="Tz6-nW-uNS" firstAttribute="leading" secondItem="UKf-Du-Uag" secondAttribute="leading" id="glr-VI-FLK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="UKf-Du-Uag" secondAttribute="bottom" id="106-X1-jvO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UKf-Du-Uag" secondAttribute="trailing" id="4d4-Br-4o9"/>
+                            <constraint firstItem="UKf-Du-Uag" firstAttribute="top" secondItem="KS7-ZL-IET" secondAttribute="topMargin" id="hHJ-vb-1oX"/>
+                            <constraint firstItem="UKf-Du-Uag" firstAttribute="leading" secondItem="KS7-ZL-IET" secondAttribute="leadingMargin" id="jL5-YC-Uvc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Zud-7n-Bdm" id="3sU-Ol-wN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aj-Ho-RcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="39"/>
         </scene>
     </scenes>
     <resources>
@@ -248,4 +334,7 @@
         <image name="up_full" width="158" height="457"/>
         <image name="up_half" width="158" height="229"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sDp-Li-5EN"/>
+    </inferredMetricsTieBreakers>
 </document>

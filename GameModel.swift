@@ -39,8 +39,8 @@ class PlistConverter {
             var eventsArray: [EventData] = []
             
             for anEvent in array {
-                if let event = anEvent["event"], let year = anEvent["year"], let url = anEvent["url"] {
-                    let newEvent = EventData(Event: event, Year: year, URL: url)
+                if let Event = anEvent["Event"], let Year = anEvent["Year"], let URL = anEvent["URL"] {
+                    let newEvent = EventData(Event: Event, Year: Year, URL: URL)
                     eventsArray.append(newEvent)
                 } else {
                     throw EventError.invalidEvent
