@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import GameKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIWebViewDelegate{
     
     
     @IBOutlet weak var FirstEventButton: UIButton!
@@ -102,14 +102,14 @@ class ViewController: UIViewController {
             }
         }
         
-        if segue.identifier == "midBotWebSegue" {
+        if segue.identifier == "thirdWebSegue" {
             let webViewController = segue.destination as? WebController
             if let wvc = webViewController {
                 wvc.clickedThird = URL(string: thirdURL)
             }
         }
         
-        if segue.identifier == "botWebSegue" {
+        if segue.identifier == "fourthWebSegue" {
             let webViewController = segue.destination as? WebController
             if let wvc = webViewController {
                 wvc.clickedFourth = URL(string: fourthURL)
@@ -117,6 +117,87 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: Game navigation
+    @IBAction func nextRound(_ sender: Any) {
+        if initialEventArray.count >= 4 && roundsPlayed <= 6 {
+            startTimer()
+            showCurrentEvent()
+        } else {
+            restartGame()
+        }
+    }
+    
+    func reloadMainGame() {
+        restartGame()
+    }
+    
+    
+    // MARK: Game Function
+    func showCurrentEvent() {
+        if initialEventArray.count >= 4 {
+            disableButtons()
+            enableArrows()
+            assignEventButtons()
+            TapOrShakeLabel.text = ""
+            roundsPlayed += 1
+        } else {
+            print("Not enough events to play!")
+        }
+    }
+    
+    func calculateOrder() {
+        if firstYear <= secondYear && secondYear <= thirdYear && thirdYear <= fourthYear {
+            correctOrder = true
+        } else {
+            correctOrder = false
+        }
+    }
+    
+    func checkAnswer() {
+        stopTimer()
+        hideTimer()
+        calculateOrder()
+        enableButtons()
+        disableArrows()
+        
+        if correctOrder == true && roundsPlayed <= 5 {
+            playDingSound()
+            NextRoundSuccessButton.isHidden = false
+            NextRoundFailButton.isHidden = true
+            TapOrShakeLabel.text = "Tap events to learn more"
+            
+            correctAnswers += 1
+        } else if correctOrder == false && roundsPlayed <= 5 {
+            playBuzzSound()
+            NextRoundSuccessButton.isHidden = true
+            NextRoundFailButton.isHidden = false
+            TapOrShakeLabel.text = "Tap events to learn more"
+            
+        } else if correctOrder == true && roundsPlayed == 6 {
+            playDingSound()
+            correctAnswers += 1
+            checkTotalScore()
+            TapOrShakeLabel.text = "Tap events to learn more"
+            
+        } else if correctOrder == false && roundsPlayed == 6 {
+            playBuzzSound()
+            checkTotalScore()
+            TapOrShakeLabel.text = "Tap events to learn more"
+        }
+    }
+    
+    
+    func restartGame() {
+        startTimer()
+        roundsPlayed = 0
+        correctAnswers = 0
+        resetEventArray()
+        showCurrentEvent()
+    }
+
+    
+    
+    
     // MARK: Timer Functionality
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
@@ -138,20 +219,21 @@ class ViewController: UIViewController {
         isTimerRunning = false
         CountdownTimer.text = "\(seconds)"
     }
-
-    func checkAnswer() {
-        // Check Answer functionality *Need to Build*
-        
+    
+    func stopTimer() {
+        timer.invalidate()
+        isTimerRunning = false
+        seconds = Int(60.0)
+        CountdownTimer.text = "\(seconds)"
     }
     
-    func populateEvents() {
-        
+    func hideTimer() {
+        CountdownTimer.isHidden = true
     }
-    
     
    
     
-    func assignEventLabels() {
+    func assignEventButtons() {
     
         func assignTopButton() {
             randomizeEvent()
