@@ -15,6 +15,7 @@ protocol EndGameScoreControllerDelegate {
 
 class EndGameScoreController: UIViewController {
     
+    @IBOutlet weak var scoreLabel: UILabel!
 
     var score: Int?
     var delegate: EndGameScoreControllerDelegate?

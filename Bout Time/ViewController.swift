@@ -38,9 +38,10 @@ class ViewController: UIViewController, UIWebViewDelegate{
         CountdownTimer.text = String(60)
         TapOrShakeLabel.text = "Shake To Complete!"
         
+        loadAllSounds()
         startTimer()
-        assignEventLabels()
-        
+        initialEvents()
+        showCurrentEvent()
         
     }
 
@@ -83,10 +84,6 @@ class ViewController: UIViewController, UIWebViewDelegate{
             }
         }
         
-        // Allows ScoreController to restart game when dismissed
-        if let destination = segue.destination as? EndGameScoreController {
-            destination.delegate = self
-        }
         
         if segue.identifier == "firstWebSegue" {
             let webViewController = segue.destination as? WebController
@@ -176,16 +173,19 @@ class ViewController: UIViewController, UIWebViewDelegate{
         } else if correctOrder == true && roundsPlayed == 6 {
             playDingSound()
             correctAnswers += 1
-            checkTotalScore()
+            
             TapOrShakeLabel.text = "Tap events to learn more"
             
         } else if correctOrder == false && roundsPlayed == 6 {
             playBuzzSound()
-            checkTotalScore()
+            
             TapOrShakeLabel.text = "Tap events to learn more"
         }
     }
     
+    func checkFinalScore() {
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EndGameScoreController") as! EndGameScoreController
+        self.navigationController?.pushViewController(loginVC, animated: true)    }
     
     func restartGame() {
         startTimer()
@@ -195,8 +195,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
         showCurrentEvent()
     }
 
-    
-    
+
     
     // MARK: Timer Functionality
     func startTimer() {
@@ -235,7 +234,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
     
     func assignEventButtons() {
     
-        func assignTopButton() {
+        func assignFirstButton() {
             randomizeEvent()
             FirstEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
             firstURL = initialEventArray[indexOfSelectedEvent].URL
@@ -243,7 +242,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
             transferUsedEvent()
         }
     
-        func assignMidTopButton() {
+        func assignSecondButton() {
             randomizeEvent()
             SecondEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
             secondURL = initialEventArray[indexOfSelectedEvent].URL
@@ -251,7 +250,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
             transferUsedEvent()
         }
         
-        func assignMidBotButton() {
+        func assignThirdButton() {
             randomizeEvent()
             ThirdEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
             thirdURL = initialEventArray[indexOfSelectedEvent].URL
@@ -259,7 +258,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
             transferUsedEvent()
         }
     
-        func assignBottomButton() {
+        func assignFourthButton() {
             randomizeEvent()
             FourthEventButton.setTitle(initialEventArray[indexOfSelectedEvent].Event, for: .normal)
             fourthURL = initialEventArray[indexOfSelectedEvent].URL
@@ -267,13 +266,44 @@ class ViewController: UIViewController, UIWebViewDelegate{
             transferUsedEvent()
         }
     
-    assignTopButton()
-    assignMidTopButton()
-    assignMidBotButton()
-    assignBottomButton()
+    assignFirstButton()
+    assignSecondButton()
+    assignThirdButton()
+    assignFourthButton()
     
     }
 
+    // MARK: Arrow Functions
+    func swapTwoStrings(_ a: inout String, _ b: inout String) {
+        let temporaryA = a
+        a = b
+        b = temporaryA
+    }
+    
+    @IBAction func moveEvent(_ sender: UIButton) {
+        
+        let firstButtonLabel = FirstEventButton.title(for: .normal)
+        let secondButtonLabel = SecondEventButton.title(for: .normal)
+        let thirdButtonLabel = ThirdEventButton.title(for: .normal)
+        let fourthButtonLabel = FourthEventButton.title(for: .normal)
+        
+        if sender == SecondUpButton || sender == FirstDownButton {
+            FirstEventButton.setTitle(secondButtonLabel, for: .normal)
+            SecondEventButton.setTitle(firstButtonLabel, for: .normal)
+            swap(&firstYear, &secondYear)
+            swap(&firstURL, &secondURL)
+        } else if sender == ThirdUpButton || sender == SecondDownButton {
+            SecondEventButton.setTitle(thirdButtonLabel, for: .normal)
+            ThirdEventButton.setTitle(secondButtonLabel, for: .normal)
+            swap(&secondYear, &thirdYear)
+            swap(&secondURL, &thirdURL)
+        } else if sender == FourthUpButton || sender == ThirdDownButton{
+            ThirdEventButton.setTitle(fourthButtonLabel, for: .normal)
+            FourthEventButton.setTitle(thirdButtonLabel, for: .normal)
+            swap(&thirdYear, &fourthYear)
+            swap(&thirdURL, &fourthURL)
+        }
+    }
 
     
 // functions for event lists

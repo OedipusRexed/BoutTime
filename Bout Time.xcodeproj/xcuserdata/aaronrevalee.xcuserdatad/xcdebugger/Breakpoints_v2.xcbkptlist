@@ -24,7 +24,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/GameHelper.swift"
-                  timestampString = "532225511.227378"
+                  timestampString = "532882417.293403"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -39,7 +39,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/GameHelper.swift"
-                  timestampString = "532225511.231836"
+                  timestampString = "532882417.297353"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -56,13 +56,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bout Time/ViewController.swift"
-            timestampString = "532225509.525931"
+            timestampString = "532882060.664744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "assignTopButton()"
-            landmarkType = "9">
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -77,6 +77,99 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1"
             endingLineNumber = "1">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bout_Time.EndGameScoreController.__deallocating_deinit"
+                  moduleName = "Bout Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
+                  timestampString = "532882417.320747"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bout_Time.EndGameScoreController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Bout_Time.EndGameScoreController"
+                  moduleName = "Bout Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
+                  timestampString = "532882417.324222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bout_Time.EndGameScoreController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Bout_Time.EndGameScoreController"
+                  moduleName = "Bout Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
+                  timestampString = "532882417.327646"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bout_Time.EndGameScoreController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Bout_Time.EndGameScoreController&gt;"
+                  moduleName = "Bout Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
+                  timestampString = "532882417.331143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bout_Time.EndGameScoreController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Bout_Time.EndGameScoreController&gt;"
+                  moduleName = "Bout Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
+                  timestampString = "532882417.335203"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bout Time/ViewController.swift"
+            timestampString = "532882060.664744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "checkFinalScore()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

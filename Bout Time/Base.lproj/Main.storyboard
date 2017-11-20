@@ -39,6 +39,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.03906743973493576" green="0.1856539249420166" blue="0.36121189594268799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Os5-dF-5uv" id="hnc-1n-TvI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJV-Ki-jnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,16 +62,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9R-Lj-VkH" userLabel="FirstSection">
                                 <rect key="frame" x="21" y="36" width="338" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaf-xi-Zqe" userLabel="FirstDownButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="115"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="Awq-DU-uXw"/>
-                                        </constraints>
-                                        <state key="normal" image="down_full"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-fK-Qxu" userLabel="FirstEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-fK-Qxu" userLabel="FirstEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="firstEvent">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -79,31 +74,36 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaf-xi-Zqe" userLabel="FirstDownButton">
+                                        <rect key="frame" x="298" y="0.0" width="40" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Awq-DU-uXw"/>
+                                        </constraints>
+                                        <state key="normal" image="down_full"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gaf-xi-Zqe" secondAttribute="bottom" id="Mum-J1-ZPD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xxt-fK-Qxu" secondAttribute="trailing" constant="39" id="TAT-bN-axt"/>
                                     <constraint firstAttribute="trailing" secondItem="Gaf-xi-Zqe" secondAttribute="trailing" id="TcE-Xm-Yak"/>
+                                    <constraint firstItem="Gaf-xi-Zqe" firstAttribute="top" secondItem="Xxt-fK-Qxu" secondAttribute="top" id="Vmd-Kc-pg5"/>
+                                    <constraint firstItem="Gaf-xi-Zqe" firstAttribute="top" secondItem="M9R-Lj-VkH" secondAttribute="top" id="W14-0m-R37"/>
+                                    <constraint firstItem="Gaf-xi-Zqe" firstAttribute="bottom" secondItem="Xxt-fK-Qxu" secondAttribute="bottom" id="XJR-oi-sys"/>
+                                    <constraint firstItem="Xxt-fK-Qxu" firstAttribute="leading" secondItem="M9R-Lj-VkH" secondAttribute="leading" id="vBx-bC-Hya"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-Q3-ktS" userLabel="SecondSection">
                                 <rect key="frame" x="21" y="159" width="338" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-NF-ZpQ" userLabel="SecondUpButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="tYy-NI-Gdp"/>
-                                        </constraints>
-                                        <state key="normal" image="up_half"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTZ-ue-PyX" userLabel="SecondDownButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTZ-ue-PyX" userLabel="SecondDownButton">
                                         <rect key="frame" x="298" y="58" width="40" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="KKA-F2-6If"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="down_half"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="secondEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,20 +114,32 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-NF-ZpQ" userLabel="SecondUpButton">
+                                        <rect key="frame" x="298" y="0.0" width="40" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="jZc-6o-JfG"/>
+                                        </constraints>
+                                        <state key="normal" image="up_half"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="yC7-NF-ZpQ" firstAttribute="leading" secondItem="qTZ-ue-PyX" secondAttribute="leading" id="OaO-GZ-wQe"/>
-                                    <constraint firstItem="qTZ-ue-PyX" firstAttribute="top" secondItem="yC7-NF-ZpQ" secondAttribute="bottom" id="Y1h-3Q-sIp"/>
-                                    <constraint firstItem="yC7-NF-ZpQ" firstAttribute="trailing" secondItem="qTZ-ue-PyX" secondAttribute="trailing" id="aiY-4y-BDd"/>
-                                    <constraint firstAttribute="trailing" secondItem="yC7-NF-ZpQ" secondAttribute="trailing" id="dbm-g0-WxX"/>
+                                    <constraint firstItem="ARd-Nc-wbu" firstAttribute="top" secondItem="S9v-Q3-ktS" secondAttribute="top" id="JCM-nB-1fQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ARd-Nc-wbu" secondAttribute="trailing" constant="38" id="Jap-Lw-Pwu"/>
+                                    <constraint firstAttribute="trailing" secondItem="yC7-NF-ZpQ" secondAttribute="trailing" id="MJQ-HG-ail"/>
+                                    <constraint firstItem="yC7-NF-ZpQ" firstAttribute="top" secondItem="ARd-Nc-wbu" secondAttribute="top" id="Ryg-js-Dmp"/>
+                                    <constraint firstAttribute="bottom" secondItem="qTZ-ue-PyX" secondAttribute="bottom" id="S1v-Tk-5DT"/>
+                                    <constraint firstItem="qTZ-ue-PyX" firstAttribute="bottom" secondItem="ARd-Nc-wbu" secondAttribute="bottom" id="bwE-ff-GmD"/>
+                                    <constraint firstItem="yC7-NF-ZpQ" firstAttribute="trailing" secondItem="qTZ-ue-PyX" secondAttribute="trailing" id="gnM-VL-pT5"/>
+                                    <constraint firstItem="qTZ-ue-PyX" firstAttribute="top" secondItem="yC7-NF-ZpQ" secondAttribute="bottom" id="hrR-Pc-CMR"/>
+                                    <constraint firstItem="ARd-Nc-wbu" firstAttribute="leading" secondItem="S9v-Q3-ktS" secondAttribute="leading" id="syL-hM-y6c"/>
+                                    <constraint firstItem="yC7-NF-ZpQ" firstAttribute="leading" secondItem="qTZ-ue-PyX" secondAttribute="leading" id="zhm-0h-Pnm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTV-E0-pr9" userLabel="ThirdSection">
                                 <rect key="frame" x="21" y="282" width="338" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-aA-eor" userLabel="ThirdEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-aA-eor" userLabel="ThirdEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="thirdEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,14 +150,15 @@
                                             </segue>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-QR-prr" userLabel="ThirdUpButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-QR-prr" userLabel="ThirdUpButton">
                                         <rect key="frame" x="298" y="0.0" width="40" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="oPW-yK-yif"/>
+                                            <constraint firstAttribute="height" constant="58" id="p4U-Az-Hqu"/>
                                         </constraints>
                                         <state key="normal" image="up_half"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-gC-pHg" userLabel="ThirdDownButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-gC-pHg" userLabel="ThirdDownButton">
                                         <rect key="frame" x="298" y="58" width="40" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="5Wh-QT-x5E"/>
@@ -155,24 +168,28 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8xH-QR-prr" secondAttribute="trailing" id="2j7-pJ-g0a"/>
+                                    <constraint firstItem="8xH-QR-prr" firstAttribute="top" secondItem="LeG-aA-eor" secondAttribute="top" id="6Lr-Y7-g45"/>
                                     <constraint firstItem="fuk-gC-pHg" firstAttribute="top" secondItem="8xH-QR-prr" secondAttribute="bottom" id="7Q7-1L-lbb"/>
                                     <constraint firstItem="8xH-QR-prr" firstAttribute="leading" secondItem="fuk-gC-pHg" secondAttribute="leading" id="Kqz-SH-D3O"/>
+                                    <constraint firstItem="8xH-QR-prr" firstAttribute="top" secondItem="YTV-E0-pr9" secondAttribute="top" id="XxN-z8-g5g"/>
                                     <constraint firstItem="8xH-QR-prr" firstAttribute="trailing" secondItem="fuk-gC-pHg" secondAttribute="trailing" id="eKY-sj-vIe"/>
+                                    <constraint firstItem="LeG-aA-eor" firstAttribute="leading" secondItem="YTV-E0-pr9" secondAttribute="leading" id="grk-o8-ZSA"/>
+                                    <constraint firstItem="LeG-aA-eor" firstAttribute="bottom" secondItem="fuk-gC-pHg" secondAttribute="bottom" id="miC-P3-bzn"/>
+                                    <constraint firstAttribute="trailing" secondItem="LeG-aA-eor" secondAttribute="trailing" constant="38" id="zBV-YK-gBb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-m0-Dbr" userLabel="FourthSection">
                                 <rect key="frame" x="21" y="405" width="338" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBr-vq-JRK" userLabel="FourthUpButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBr-vq-JRK" userLabel="FourthUpButton">
                                         <rect key="frame" x="298" y="0.0" width="40" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="J2V-cN-KRv"/>
                                         </constraints>
                                         <state key="normal" image="up_full"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-lJ-q8g" userLabel="FourthEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-lJ-q8g" userLabel="FourthEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="fourthEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,6 +203,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XBr-vq-JRK" secondAttribute="trailing" id="50U-L9-g7P"/>
+                                    <constraint firstAttribute="bottom" secondItem="XBr-vq-JRK" secondAttribute="bottom" id="Bbm-l4-qdN"/>
+                                    <constraint firstAttribute="trailing" secondItem="nsM-lJ-q8g" secondAttribute="trailing" constant="39" id="LYP-f0-0Um"/>
+                                    <constraint firstItem="XBr-vq-JRK" firstAttribute="bottom" secondItem="nsM-lJ-q8g" secondAttribute="bottom" id="fOR-vt-zEp"/>
+                                    <constraint firstItem="XBr-vq-JRK" firstAttribute="top" secondItem="7vd-m0-Dbr" secondAttribute="top" id="hEd-G8-b1g"/>
+                                    <constraint firstItem="nsM-lJ-q8g" firstAttribute="leading" secondItem="7vd-m0-Dbr" secondAttribute="leading" id="pbi-3N-74K"/>
+                                    <constraint firstItem="XBr-vq-JRK" firstAttribute="top" secondItem="nsM-lJ-q8g" secondAttribute="top" id="s9W-Dd-S8S"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WU9-2h-s5C" userLabel="FifthSection">
@@ -206,7 +229,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-6y-Ka4" userLabel="TapOrShakeLabel">
-                                        <rect key="frame" x="0.0" y="75" width="338" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="75" width="338" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" red="0.28970864769999999" green="0.7694418314" blue="0.77436944799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
