@@ -27,6 +27,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
     @IBOutlet weak var NextRoundFailButton: UIButton!
     @IBOutlet weak var CountdownTimer: UILabel!
     @IBOutlet weak var TapOrShakeLabel: UILabel!
+    @IBOutlet weak var CheckFinalScore: UIButton!
     
     
     
@@ -114,6 +115,14 @@ class ViewController: UIViewController, UIWebViewDelegate{
         }
     }
 
+    @IBAction func NextRound(_ sender: Any) {
+        if initialEventArray.count >= 4 && roundsPlayed <= 6 {
+        startTimer()
+        showCurrentEvent()
+    } else {
+       CheckFinalScore.isHidden = false
+        }
+    }
     // MARK: Game navigation
     @IBAction func nextRound(_ sender: Any) {
         if initialEventArray.count >= 4 && roundsPlayed <= 6 {
@@ -134,6 +143,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
         if initialEventArray.count >= 4 {
             disableButtons()
             enableArrows()
+            hideNextRound()
             assignEventButtons()
             TapOrShakeLabel.text = ""
             roundsPlayed += 1
@@ -308,10 +318,10 @@ class ViewController: UIViewController, UIWebViewDelegate{
     
 // functions for event lists
     
-    func initialEvents () { initialEventArray.append(contentsOf: event)
+    func initialEvents() { initialEventArray.append(contentsOf: event)
     }
     
-    func randomizeEvent () { indexOfSelectedEvent = GKRandomSource.sharedRandom().nextInt(upperBound: initialEventArray.count)
+    func randomizeEvent() { indexOfSelectedEvent = GKRandomSource.sharedRandom().nextInt(upperBound: initialEventArray.count)
     }
     
     func transferUsedEvent() {
@@ -351,7 +361,10 @@ class ViewController: UIViewController, UIWebViewDelegate{
         ThirdEventButton.isEnabled = false
         FourthEventButton.isEnabled = false
     }
-    
+    func hideNextRound() {
+        NextRoundFailButton.isHidden = true
+        NextRoundSuccessButton.isHidden = true
+    }
     func enableButtons() {
         FirstEventButton.isEnabled = true
         SecondEventButton.isEnabled = true

@@ -62,9 +62,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9R-Lj-VkH" userLabel="FirstSection">
                                 <rect key="frame" x="21" y="36" width="338" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-fK-Qxu" userLabel="FirstEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-fK-Qxu" userLabel="FirstEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="firstEvent">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -102,9 +103,10 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="down_half"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="secondEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -138,9 +140,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTV-E0-pr9" userLabel="ThirdSection">
                                 <rect key="frame" x="21" y="282" width="338" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-aA-eor" userLabel="ThirdEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-aA-eor" userLabel="ThirdEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="thirdEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -188,9 +191,10 @@
                                         </constraints>
                                         <state key="normal" image="up_full"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-lJ-q8g" userLabel="FourthEventButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-lJ-q8g" userLabel="FourthEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="fourthEvent">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -221,6 +225,9 @@
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-yA-LrJ" userLabel="NextRoundFailButton">
                                         <rect key="frame" x="43" y="0.0" width="252" height="67"/>
                                         <state key="normal" image="next_round_fail"/>
+                                        <connections>
+                                            <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Udx-Ut-AaY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oB-aK-w2B" userLabel="CountdownTimer">
                                         <rect key="frame" x="43" y="0.0" width="252" height="67"/>
@@ -234,6 +241,20 @@
                                         <color key="textColor" red="0.28970864769999999" green="0.7694418314" blue="0.77436944799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slb-VB-SUg" userLabel="CheckFinalScore">
+                                        <rect key="frame" x="43" y="4" width="252" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.88240200281143188" green="0.54184055328369141" blue="0.1862030029296875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Check Final Score">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="xzT-EC-cvV" kind="popoverPresentation" identifier="finalScore" popoverAnchorView="Slb-VB-SUg" id="eGH-7n-hsu">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3oB-aK-w2B" firstAttribute="bottom" secondItem="PZF-gX-zqG" secondAttribute="bottom" id="38O-4c-1TP"/>
@@ -279,11 +300,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CheckFinalScore" destination="Slb-VB-SUg" id="9ZE-U7-i5l"/>
                         <outlet property="CountdownTimer" destination="3oB-aK-w2B" id="fds-Ci-n7g"/>
                         <outlet property="FirstDownButton" destination="Gaf-xi-Zqe" id="TuC-zH-ULj"/>
                         <outlet property="FirstEventButton" destination="Xxt-fK-Qxu" id="ayo-CU-Te3"/>
                         <outlet property="FourthEventButton" destination="nsM-lJ-q8g" id="LIH-PE-9El"/>
                         <outlet property="FourthUpButton" destination="XBr-vq-JRK" id="1Xu-Ke-bYp"/>
+                        <outlet property="NextRound" destination="Vy9-yA-LrJ" id="VJn-yL-EeD"/>
                         <outlet property="NextRoundFailButton" destination="Vy9-yA-LrJ" id="HfQ-00-t2h"/>
                         <outlet property="NextRoundSuccessButton" destination="PZF-gX-zqG" id="Tyw-7X-V3u"/>
                         <outlet property="SecondDownButton" destination="qTZ-ue-PyX" id="sni-Sb-ad9"/>

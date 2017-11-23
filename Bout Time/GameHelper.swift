@@ -7,13 +7,10 @@
 //
 
 import Foundation
-import GameKit
 
-var usedEventArray: [EventData] = []
 var indexOfSelectedEvent: Int = 0
+var usedEventArray: [EventData] = []
 var initialEventArray: [EventData] = []
-
-
 
 // Default game settings
 let roundsPerGame = 6
