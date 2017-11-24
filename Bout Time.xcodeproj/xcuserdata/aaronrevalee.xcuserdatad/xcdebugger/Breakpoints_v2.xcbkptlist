@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bout Time/ViewController.swift"
-            timestampString = "533095495.039659"
+            timestampString = "533253832.208977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -40,7 +40,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
-                  timestampString = "533095500.211962"
+                  timestampString = "533253834.934058"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -55,7 +55,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
-                  timestampString = "533095500.215859"
+                  timestampString = "533253834.93831"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -70,7 +70,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
-                  timestampString = "533095500.219565"
+                  timestampString = "533253834.941784"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -85,7 +85,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
-                  timestampString = "533095500.223095"
+                  timestampString = "533253834.945353"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -100,7 +100,7 @@
                   moduleName = "Bout Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aaronrevalee/Desktop/Projects/Bout%20Time/Bout%20Time/EndGameScoreController.swift"
-                  timestampString = "533095500.226622"
+                  timestampString = "533253834.955078"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -108,54 +108,6 @@
                   offsetFromSymbolStart = "31">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bout Time/ViewController.swift"
-            timestampString = "533095495.039659"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "checkFinalScore()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bout Time/ViewController.swift"
-            timestampString = "533095495.039659"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "NextRound(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bout Time/ViewController.swift"
-            timestampString = "533095495.039659"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "NextRound(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

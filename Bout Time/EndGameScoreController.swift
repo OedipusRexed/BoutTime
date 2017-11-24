@@ -14,9 +14,9 @@ protocol EndGameScoreControllerDelegate {
 }
 
 class EndGameScoreController: UIViewController {
-    
-    @IBOutlet weak var scoreLabel: UILabel!
 
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     var score: Int?
     var delegate: EndGameScoreControllerDelegate?
     
@@ -32,12 +32,6 @@ class EndGameScoreController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @IBAction func dismiss(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        delegate?.reloadMainGame()
     }
     
 }

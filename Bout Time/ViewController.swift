@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import GameKit
 
-class ViewController: UIViewController, UIWebViewDelegate{
+class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControllerDelegate {
     
     
     @IBOutlet weak var FirstEventButton: UIButton!
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
             if isTimerRunning == true {
                 checkAnswer()
             } else if isTimerRunning == false {
-                nextRound(UIEventSubtype.motionShake)
+                NextRound(UIEventSubtype.motionShake)
             }
         }
     }
@@ -85,7 +85,9 @@ class ViewController: UIViewController, UIWebViewDelegate{
             }
         }
         
-        
+        if let destination = segue.destination as? EndGameScoreController {
+            destination.delegate = self}
+            
         if segue.identifier == "firstWebSegue" {
             let webViewController = segue.destination as? WebController
             if let wvc = webViewController {
@@ -117,35 +119,27 @@ class ViewController: UIViewController, UIWebViewDelegate{
 
     @IBAction func NextRound(_ sender: Any) {
         if initialEventArray.count >= 4 && roundsPlayed <= 6 {
-        startTimer()
-        showCurrentEvent()
-    } else {
-       CheckFinalScore.isHidden = false
-        }
-    }
-    // MARK: Game navigation
-    @IBAction func nextRound(_ sender: Any) {
-        if initialEventArray.count >= 4 && roundsPlayed <= 6 {
             startTimer()
             showCurrentEvent()
         } else {
-            restartGame()
+            CheckFinalScore.isHidden = false
         }
     }
+    // MARK: Game navigation
     
     func reloadMainGame() {
         restartGame()
     }
     
     
-    // MARK: Game Function
+    // MARK: Game Functionality
     func showCurrentEvent() {
         if initialEventArray.count >= 4 {
             disableButtons()
             enableArrows()
             hideNextRound()
             assignEventButtons()
-            TapOrShakeLabel.text = ""
+            TapOrShakeLabel.text = "Shake To Answer!"
             roundsPlayed += 1
         } else {
             print("Not enough events to play!")
@@ -183,19 +177,15 @@ class ViewController: UIViewController, UIWebViewDelegate{
         } else if correctOrder == true && roundsPlayed == 6 {
             playDingSound()
             correctAnswers += 1
-            
+            CheckFinalScore.isHidden = false
             TapOrShakeLabel.text = "Tap events to learn more"
             
         } else if correctOrder == false && roundsPlayed == 6 {
             playBuzzSound()
-            
+            CheckFinalScore.isHidden = false
             TapOrShakeLabel.text = "Tap events to learn more"
         }
     }
-    
-    func checkFinalScore() {
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EndGameScoreController") as! EndGameScoreController
-        self.navigationController?.pushViewController(loginVC, animated: true)    }
     
     func restartGame() {
         startTimer()
@@ -209,8 +199,14 @@ class ViewController: UIViewController, UIWebViewDelegate{
     
     // MARK: Timer Functionality
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
+        NextRoundSuccessButton.isHidden = true
+        NextRoundFailButton.isHidden = true
+        CheckFinalScore.isHidden = true
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateCounter)), userInfo: nil, repeats: true)
+        
         isTimerRunning = true
+        CountdownTimer.isHidden = false
     }
     
     func updateCounter() {
@@ -240,7 +236,7 @@ class ViewController: UIViewController, UIWebViewDelegate{
         CountdownTimer.isHidden = true
     }
     
-   
+   // MARK: Event Button Assignment
     
     func assignEventButtons() {
     
@@ -290,7 +286,8 @@ class ViewController: UIViewController, UIWebViewDelegate{
         b = temporaryA
     }
     
-    @IBAction func moveEvent(_ sender: UIButton) {
+    
+    @IBAction func moveEvents(_ sender: UIButton) {
         
         let firstButtonLabel = FirstEventButton.title(for: .normal)
         let secondButtonLabel = SecondEventButton.title(for: .normal)
@@ -300,23 +297,23 @@ class ViewController: UIViewController, UIWebViewDelegate{
         if sender == SecondUpButton || sender == FirstDownButton {
             FirstEventButton.setTitle(secondButtonLabel, for: .normal)
             SecondEventButton.setTitle(firstButtonLabel, for: .normal)
-            swap(&firstYear, &secondYear)
-            swap(&firstURL, &secondURL)
+            swapTwoStrings(&firstYear, &secondYear)
+            swapTwoStrings(&firstURL, &secondURL)
         } else if sender == ThirdUpButton || sender == SecondDownButton {
             SecondEventButton.setTitle(thirdButtonLabel, for: .normal)
             ThirdEventButton.setTitle(secondButtonLabel, for: .normal)
-            swap(&secondYear, &thirdYear)
-            swap(&secondURL, &thirdURL)
-        } else if sender == FourthUpButton || sender == ThirdDownButton{
+            swapTwoStrings(&secondYear, &thirdYear)
+            swapTwoStrings(&secondURL, &thirdURL)
+        } else if sender == FourthUpButton || sender == ThirdDownButton {
             ThirdEventButton.setTitle(fourthButtonLabel, for: .normal)
             FourthEventButton.setTitle(thirdButtonLabel, for: .normal)
-            swap(&thirdYear, &fourthYear)
-            swap(&thirdURL, &fourthURL)
+            swapTwoStrings(&thirdYear, &fourthYear)
+            swapTwoStrings(&thirdURL, &fourthURL)
         }
     }
 
     
-// functions for event lists
+// MARK: Functions for Event Lists
     
     func initialEvents() { initialEventArray.append(contentsOf: event)
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eY6-pp-gU0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,12 +40,28 @@
                         <color key="backgroundColor" red="0.03906743973493576" green="0.1856539249420166" blue="0.36121189594268799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="scoreLabel" destination="Os5-dF-5uv" id="hnc-1n-TvI"/>
+                        <outlet property="scoreLabel" destination="Os5-dF-5uv" id="Px1-TM-xuX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJV-Ki-jnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519.20000000000005" y="-705.69715142428788"/>
+            <point key="canvasLocation" x="-519" y="812"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rVf-BJ-qnD">
+            <objects>
+                <navigationController id="eY6-pp-gU0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1f-Se-f3e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JJB-iU-Lxc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCC-In-Skr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1583" y="39"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -60,10 +76,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9R-Lj-VkH" userLabel="FirstSection">
-                                <rect key="frame" x="21" y="36" width="338" height="115"/>
+                                <rect key="frame" x="21" y="80" width="338" height="71"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-fK-Qxu" userLabel="FirstEventButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="71"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="firstEvent">
@@ -76,11 +92,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaf-xi-Zqe" userLabel="FirstDownButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="115"/>
+                                        <rect key="frame" x="298" y="0.0" width="40" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Awq-DU-uXw"/>
                                         </constraints>
                                         <state key="normal" image="down_full"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8NQ-EO-Hkf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -102,6 +121,9 @@
                                             <constraint firstAttribute="height" constant="57" id="KKA-F2-6If"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="down_half"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nxD-cu-5VZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
@@ -122,6 +144,9 @@
                                             <constraint firstAttribute="width" constant="40" id="jZc-6o-JfG"/>
                                         </constraints>
                                         <state key="normal" image="up_half"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAE-6U-xJh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -160,6 +185,9 @@
                                             <constraint firstAttribute="height" constant="58" id="p4U-Az-Hqu"/>
                                         </constraints>
                                         <state key="normal" image="up_half"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLD-Nd-ZtW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-gC-pHg" userLabel="ThirdDownButton">
                                         <rect key="frame" x="298" y="58" width="40" height="57"/>
@@ -167,6 +195,9 @@
                                             <constraint firstAttribute="height" constant="57" id="5Wh-QT-x5E"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="down_half"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJl-YQ-nYn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -190,6 +221,9 @@
                                             <constraint firstAttribute="width" constant="40" id="J2V-cN-KRv"/>
                                         </constraints>
                                         <state key="normal" image="up_full"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rpt-f0-9LS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-lJ-q8g" userLabel="FourthEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
@@ -221,6 +255,9 @@
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-gX-zqG" userLabel="NextRoundSuccessButton">
                                         <rect key="frame" x="43" y="0.0" width="252" height="67"/>
                                         <state key="normal" title="Button" image="next_round_success"/>
+                                        <connections>
+                                            <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FL5-uq-eH9"/>
+                                        </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-yA-LrJ" userLabel="NextRoundFailButton">
                                         <rect key="frame" x="43" y="0.0" width="252" height="67"/>
@@ -250,7 +287,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="xzT-EC-cvV" kind="popoverPresentation" identifier="finalScore" popoverAnchorView="Slb-VB-SUg" id="eGH-7n-hsu">
+                                            <segue destination="xzT-EC-cvV" kind="popoverPresentation" identifier="scoreSegue" popoverAnchorView="Slb-VB-SUg" id="eGH-7n-hsu">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -299,6 +336,7 @@
                             <constraint firstItem="YTV-E0-pr9" firstAttribute="trailing" secondItem="7vd-m0-Dbr" secondAttribute="trailing" id="uNP-Oh-5JJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nPb-Cf-vTh"/>
                     <connections>
                         <outlet property="CheckFinalScore" destination="Slb-VB-SUg" id="9ZE-U7-i5l"/>
                         <outlet property="CountdownTimer" destination="3oB-aK-w2B" id="fds-Ci-n7g"/>
@@ -306,7 +344,6 @@
                         <outlet property="FirstEventButton" destination="Xxt-fK-Qxu" id="ayo-CU-Te3"/>
                         <outlet property="FourthEventButton" destination="nsM-lJ-q8g" id="LIH-PE-9El"/>
                         <outlet property="FourthUpButton" destination="XBr-vq-JRK" id="1Xu-Ke-bYp"/>
-                        <outlet property="NextRound" destination="Vy9-yA-LrJ" id="VJn-yL-EeD"/>
                         <outlet property="NextRoundFailButton" destination="Vy9-yA-LrJ" id="HfQ-00-t2h"/>
                         <outlet property="NextRoundSuccessButton" destination="PZF-gX-zqG" id="Tyw-7X-V3u"/>
                         <outlet property="SecondDownButton" destination="qTZ-ue-PyX" id="sni-Sb-ad9"/>
