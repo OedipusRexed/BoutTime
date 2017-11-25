@@ -15,6 +15,7 @@ protocol EndGameScoreControllerDelegate {
 
 class EndGameScoreController: UIViewController {
 
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
     var score: Int?
@@ -34,4 +35,6 @@ class EndGameScoreController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-}
+
+    
+    }

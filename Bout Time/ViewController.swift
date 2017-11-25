@@ -79,9 +79,9 @@ class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControlle
     // MARK: Navigates to each additional view with correct link or score
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "scoreSegue" {
-            let scoreViewController = segue.destination as? EndGameScoreController
-            if let svc = scoreViewController {
-                svc.score = correctAnswers
+            let endGameScoreController = segue.destination as? EndGameScoreController
+            if let egsc = endGameScoreController {
+                egsc.score = correctAnswers
             }
         }
         
@@ -177,14 +177,22 @@ class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControlle
         } else if correctOrder == true && roundsPlayed == 6 {
             playDingSound()
             correctAnswers += 1
-            CheckFinalScore.isHidden = false
+            prepareScoreSegue()
             TapOrShakeLabel.text = "Tap events to learn more"
             
         } else if correctOrder == false && roundsPlayed == 6 {
             playBuzzSound()
-            CheckFinalScore.isHidden = false
+            prepareScoreSegue()
             TapOrShakeLabel.text = "Tap events to learn more"
         }
+    }
+    
+    func prepareScoreSegue() {
+        CheckFinalScore.isHidden = false
+        NextRoundFailButton.isHidden = true
+        NextRoundSuccessButton.isHidden = true
+        endGame()
+        CountdownTimer.isHidden = true
     }
     
     func restartGame() {
