@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import GameKit
 
-class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControllerDelegate {
+class ViewController: UIViewController, UIWebViewDelegate {
     
     
     @IBOutlet weak var FirstEventButton: UIButton!
@@ -28,6 +28,8 @@ class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControlle
     @IBOutlet weak var CountdownTimer: UILabel!
     @IBOutlet weak var TapOrShakeLabel: UILabel!
     @IBOutlet weak var CheckFinalScore: UIButton!
+    @IBOutlet weak var FinalScoreLabel: UILabel!
+    @IBOutlet weak var ScorePlacementLabel: UILabel!
     
     
     
@@ -78,15 +80,6 @@ class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControlle
     
     // MARK: Navigates to each additional view with correct link or score
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "scoreSegue" {
-            let endGameScoreController = segue.destination as? EndGameScoreController
-            if let egsc = endGameScoreController {
-                egsc.score = correctAnswers
-            }
-        }
-        
-        if let destination = segue.destination as? EndGameScoreController {
-            destination.delegate = self}
             
         if segue.identifier == "firstWebSegue" {
             let webViewController = segue.destination as? WebController
@@ -187,6 +180,17 @@ class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControlle
         }
     }
     
+    @IBAction func CheckFinalScore(_ sender: UIButton) {
+        hideAll()
+        hideNextRound()
+        CheckFinalScore.isHidden = true
+    
+        let score = correctAnswers
+        ScorePlacementLabel.isHidden = false
+        FinalScoreLabel.isHidden = false
+        ScorePlacementLabel.text = "\(score)/6"
+        
+    }
     func prepareScoreSegue() {
         CheckFinalScore.isHidden = false
         NextRoundFailButton.isHidden = true
@@ -370,6 +374,23 @@ class ViewController: UIViewController, UIWebViewDelegate, EndGameScoreControlle
         NextRoundFailButton.isHidden = true
         NextRoundSuccessButton.isHidden = true
     }
+    
+    func hideAll() {
+        FirstDownButton.isHidden = true
+        SecondUpButton.isHidden = true
+        SecondDownButton.isHidden = true
+        ThirdUpButton.isHidden = true
+        ThirdDownButton.isHidden = true
+        FourthUpButton.isHidden = true
+        FirstEventButton.isHidden = true
+        SecondEventButton.isHidden = true
+        ThirdEventButton.isHidden = true
+        FourthEventButton.isHidden = true
+        CountdownTimer.isHidden = true
+        TapOrShakeLabel.isHidden = true
+        
+    }
+    
     func enableButtons() {
         FirstEventButton.isEnabled = true
         SecondEventButton.isEnabled = true

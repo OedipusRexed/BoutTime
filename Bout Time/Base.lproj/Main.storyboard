@@ -10,43 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--End Game Score Controller-->
-        <scene sceneID="SQf-nH-UeN">
-            <objects>
-                <viewController id="xzT-EC-cvV" customClass="EndGameScoreController" customModule="Bout_Time" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aaZ-0P-LoJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="pUM-6F-MOM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zhI-Np-Rfk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Final Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh4-Xd-zTY">
-                                <rect key="frame" x="119" y="99" width="136" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os5-dF-5uv" userLabel="scoreLabel">
-                                <rect key="frame" x="133" y="177" width="109" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.03906743973493576" green="0.1856539249420166" blue="0.36121189594268799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="scoreLabel" destination="Os5-dF-5uv" id="YrK-7U-fuM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VJV-Ki-jnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-519" y="812"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -109,6 +72,23 @@
                                             <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nxD-cu-5VZ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-NF-ZpQ" userLabel="SecondUpButton">
+                                        <rect key="frame" x="298" y="0.0" width="40" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="jZc-6o-JfG"/>
+                                        </constraints>
+                                        <state key="normal" image="up_half"/>
+                                        <connections>
+                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAE-6U-xJh"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Final Score Is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-ic-70q">
+                                        <rect key="frame" x="-8" y="8" width="338" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,16 +100,6 @@
                                             <segue destination="qf5-0x-EBM" kind="popoverPresentation" identifier="secondWebSegue" popoverAnchorView="ARd-Nc-wbu" id="GFB-wV-Z1M">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-NF-ZpQ" userLabel="SecondUpButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="jZc-6o-JfG"/>
-                                        </constraints>
-                                        <state key="normal" image="up_half"/>
-                                        <connections>
-                                            <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAE-6U-xJh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -183,6 +153,13 @@
                                             <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJl-YQ-nYn"/>
                                         </connections>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# / #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-Rg-QFT">
+                                        <rect key="frame" x="0.0" y="8" width="300" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="8xH-QR-prr" secondAttribute="trailing" id="2j7-pJ-g0a"/>
@@ -197,7 +174,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-m0-Dbr" userLabel="FourthSection">
-                                <rect key="frame" x="21" y="405" width="338" height="115"/>
+                                <rect key="frame" x="21" y="405" width="338" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBr-vq-JRK" userLabel="FourthUpButton">
                                         <rect key="frame" x="298" y="0.0" width="40" height="115"/>
@@ -225,7 +202,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XBr-vq-JRK" secondAttribute="trailing" id="50U-L9-g7P"/>
-                                    <constraint firstAttribute="bottom" secondItem="XBr-vq-JRK" secondAttribute="bottom" id="Bbm-l4-qdN"/>
+                                    <constraint firstAttribute="bottom" secondItem="XBr-vq-JRK" secondAttribute="bottom" constant="-9" id="Bbm-l4-qdN"/>
                                     <constraint firstAttribute="trailing" secondItem="nsM-lJ-q8g" secondAttribute="trailing" constant="39" id="LYP-f0-0Um"/>
                                     <constraint firstItem="XBr-vq-JRK" firstAttribute="bottom" secondItem="nsM-lJ-q8g" secondAttribute="bottom" id="fOR-vt-zEp"/>
                                     <constraint firstItem="XBr-vq-JRK" firstAttribute="top" secondItem="7vd-m0-Dbr" secondAttribute="top" id="hEd-G8-b1g"/>
@@ -271,9 +248,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="xzT-EC-cvV" kind="popoverPresentation" identifier="scoreSegue" popoverAnchorView="Slb-VB-SUg" id="jfI-mt-RrM">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <action selector="CheckFinalScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxL-5w-Jml"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -299,7 +274,7 @@
                         <color key="backgroundColor" red="0.0" green="0.18563680348939601" blue="0.35993102964410928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7vd-m0-Dbr" firstAttribute="leading" secondItem="WU9-2h-s5C" secondAttribute="leading" id="2we-gB-8q3"/>
-                            <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="7vd-m0-Dbr" secondAttribute="bottom" constant="12" id="4EE-Mo-Lda"/>
+                            <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="7vd-m0-Dbr" secondAttribute="bottom" constant="21" id="4EE-Mo-Lda"/>
                             <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="532" id="4hI-WL-ogX"/>
                             <constraint firstItem="M9R-Lj-VkH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="93Q-pi-eIO"/>
                             <constraint firstItem="7vd-m0-Dbr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="405" id="9JT-Jw-77Z"/>
@@ -323,12 +298,14 @@
                     <connections>
                         <outlet property="CheckFinalScore" destination="Slb-VB-SUg" id="9ZE-U7-i5l"/>
                         <outlet property="CountdownTimer" destination="3oB-aK-w2B" id="fds-Ci-n7g"/>
+                        <outlet property="FinalScoreLabel" destination="QG6-ic-70q" id="1of-0u-6H2"/>
                         <outlet property="FirstDownButton" destination="Gaf-xi-Zqe" id="TuC-zH-ULj"/>
                         <outlet property="FirstEventButton" destination="Xxt-fK-Qxu" id="ayo-CU-Te3"/>
                         <outlet property="FourthEventButton" destination="nsM-lJ-q8g" id="LIH-PE-9El"/>
                         <outlet property="FourthUpButton" destination="XBr-vq-JRK" id="1Xu-Ke-bYp"/>
                         <outlet property="NextRoundFailButton" destination="Vy9-yA-LrJ" id="HfQ-00-t2h"/>
                         <outlet property="NextRoundSuccessButton" destination="PZF-gX-zqG" id="Tyw-7X-V3u"/>
+                        <outlet property="ScorePlacementLabel" destination="Htt-Rg-QFT" id="wcF-QH-4BO"/>
                         <outlet property="SecondDownButton" destination="qTZ-ue-PyX" id="sni-Sb-ad9"/>
                         <outlet property="SecondEventButton" destination="ARd-Nc-wbu" id="QXL-ex-pou"/>
                         <outlet property="SecondUpButton" destination="yC7-NF-ZpQ" id="C0g-VG-tzK"/>
