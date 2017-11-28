@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9R-Lj-VkH" userLabel="FirstSection">
-                                <rect key="frame" x="21" y="36" width="338" height="115"/>
+                                <rect key="frame" x="25" y="36" width="369" height="115"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-fK-Qxu" userLabel="FirstEventButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="firstEvent">
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaf-xi-Zqe" userLabel="FirstDownButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="115"/>
+                                        <rect key="frame" x="329" y="0.0" width="40" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Awq-DU-uXw"/>
                                         </constraints>
@@ -60,10 +60,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-Q3-ktS" userLabel="SecondSection">
-                                <rect key="frame" x="21" y="159" width="338" height="115"/>
+                                <rect key="frame" x="25" y="159" width="369" height="115"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTZ-ue-PyX" userLabel="SecondDownButton">
-                                        <rect key="frame" x="298" y="58" width="40" height="57"/>
+                                        <rect key="frame" x="329" y="58" width="40" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="KKA-F2-6If"/>
                                         </constraints>
@@ -73,7 +73,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-NF-ZpQ" userLabel="SecondUpButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="58"/>
+                                        <rect key="frame" x="329" y="0.0" width="40" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="jZc-6o-JfG"/>
                                         </constraints>
@@ -82,15 +82,8 @@
                                             <action selector="moveEvents:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAE-6U-xJh"/>
                                         </connections>
                                     </button>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Final Score Is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-ic-70q">
-                                        <rect key="frame" x="-8" y="8" width="338" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-Nc-wbu" userLabel="SecondEventButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="secondEvent">
@@ -102,6 +95,13 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Final Score Is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG6-ic-70q">
+                                        <rect key="frame" x="-8" y="8" width="338" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ARd-Nc-wbu" firstAttribute="top" secondItem="S9v-Q3-ktS" secondAttribute="top" id="JCM-nB-1fQ"/>
@@ -117,10 +117,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTV-E0-pr9" userLabel="ThirdSection">
-                                <rect key="frame" x="21" y="282" width="338" height="115"/>
+                                <rect key="frame" x="25" y="282" width="369" height="115"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-aA-eor" userLabel="ThirdEventButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="thirdEvent">
@@ -133,7 +133,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-QR-prr" userLabel="ThirdUpButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="58"/>
+                                        <rect key="frame" x="329" y="0.0" width="40" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="oPW-yK-yif"/>
                                             <constraint firstAttribute="height" constant="58" id="p4U-Az-Hqu"/>
@@ -144,7 +144,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuk-gC-pHg" userLabel="ThirdDownButton">
-                                        <rect key="frame" x="298" y="58" width="40" height="57"/>
+                                        <rect key="frame" x="329" y="58" width="40" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="5Wh-QT-x5E"/>
                                         </constraints>
@@ -174,10 +174,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vd-m0-Dbr" userLabel="FourthSection">
-                                <rect key="frame" x="21" y="405" width="338" height="106"/>
+                                <rect key="frame" x="25" y="405" width="369" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBr-vq-JRK" userLabel="FourthUpButton">
-                                        <rect key="frame" x="298" y="0.0" width="40" height="115"/>
+                                        <rect key="frame" x="329" y="0.0" width="40" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="J2V-cN-KRv"/>
                                         </constraints>
@@ -187,7 +187,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-lJ-q8g" userLabel="FourthEventButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="115"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                         <state key="normal" title="fourthEvent">
@@ -211,36 +211,33 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WU9-2h-s5C" userLabel="FifthSection">
-                                <rect key="frame" x="21" y="532" width="338" height="115"/>
+                                <rect key="frame" x="20" y="615" width="374" height="101"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-gX-zqG" userLabel="NextRoundSuccessButton">
-                                        <rect key="frame" x="43" y="0.0" width="252" height="67"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-gX-zqG" userLabel="NextRoundSuccessButton">
+                                        <rect key="frame" x="61" y="0.0" width="252" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="next_round_success"/>
                                         <connections>
                                             <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FL5-uq-eH9"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-yA-LrJ" userLabel="NextRoundFailButton">
-                                        <rect key="frame" x="43" y="0.0" width="252" height="67"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-yA-LrJ" userLabel="NextRoundFailButton">
+                                        <rect key="frame" x="61" y="0.0" width="252" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="next_round_fail"/>
                                         <connections>
                                             <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Udx-Ut-AaY"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oB-aK-w2B" userLabel="CountdownTimer">
-                                        <rect key="frame" x="43" y="0.0" width="252" height="67"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oB-aK-w2B" userLabel="CountdownTimer">
+                                        <rect key="frame" x="61" y="0.0" width="252" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-6y-Ka4" userLabel="TapOrShakeLabel">
-                                        <rect key="frame" x="0.0" y="75" width="338" height="26"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <color key="textColor" red="0.28970864769999999" green="0.7694418314" blue="0.77436944799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slb-VB-SUg" userLabel="CheckFinalScore">
-                                        <rect key="frame" x="43" y="4" width="252" height="59"/>
+                                        <rect key="frame" x="61" y="0.0" width="252" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.88240200281143188" green="0.54184055328369141" blue="0.1862030029296875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -251,31 +248,21 @@
                                             <action selector="CheckFinalScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxL-5w-Jml"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-6y-Ka4" userLabel="TapOrShakeLabel">
+                                        <rect key="frame" x="18" y="75" width="338" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" red="0.28970864769999999" green="0.7694418314" blue="0.77436944799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="3oB-aK-w2B" firstAttribute="bottom" secondItem="PZF-gX-zqG" secondAttribute="bottom" id="38O-4c-1TP"/>
-                                    <constraint firstItem="UI3-6y-Ka4" firstAttribute="leading" secondItem="WU9-2h-s5C" secondAttribute="leading" id="3Z7-YS-n6Y"/>
-                                    <constraint firstItem="PZF-gX-zqG" firstAttribute="leading" secondItem="3oB-aK-w2B" secondAttribute="leading" id="6xe-qh-XGK"/>
-                                    <constraint firstItem="Vy9-yA-LrJ" firstAttribute="leading" secondItem="WU9-2h-s5C" secondAttribute="leading" constant="43" id="HGa-Fz-Ik2"/>
-                                    <constraint firstItem="3oB-aK-w2B" firstAttribute="top" secondItem="Vy9-yA-LrJ" secondAttribute="top" id="HXR-Ns-zdd"/>
-                                    <constraint firstItem="PZF-gX-zqG" firstAttribute="top" secondItem="3oB-aK-w2B" secondAttribute="top" id="Hv0-ah-jfQ"/>
-                                    <constraint firstItem="UI3-6y-Ka4" firstAttribute="top" secondItem="3oB-aK-w2B" secondAttribute="bottom" constant="8" id="Nm4-Rv-WVK"/>
-                                    <constraint firstItem="PZF-gX-zqG" firstAttribute="bottom" secondItem="Vy9-yA-LrJ" secondAttribute="bottom" id="XTI-9N-NBP"/>
-                                    <constraint firstItem="PZF-gX-zqG" firstAttribute="trailing" secondItem="Vy9-yA-LrJ" secondAttribute="trailing" id="cac-Vb-sRU"/>
-                                    <constraint firstItem="3oB-aK-w2B" firstAttribute="trailing" secondItem="Vy9-yA-LrJ" secondAttribute="trailing" id="dfM-DK-Gv2"/>
-                                    <constraint firstItem="Vy9-yA-LrJ" firstAttribute="top" secondItem="WU9-2h-s5C" secondAttribute="top" id="ebE-Li-qqi"/>
-                                    <constraint firstItem="PZF-gX-zqG" firstAttribute="centerX" secondItem="WU9-2h-s5C" secondAttribute="centerX" id="f1A-B6-cPa"/>
-                                    <constraint firstAttribute="bottom" secondItem="PZF-gX-zqG" secondAttribute="bottom" constant="48" id="i6B-hr-Umb"/>
-                                    <constraint firstItem="Vy9-yA-LrJ" firstAttribute="leading" secondItem="3oB-aK-w2B" secondAttribute="leading" id="kkS-Uf-jGv"/>
-                                    <constraint firstAttribute="trailing" secondItem="UI3-6y-Ka4" secondAttribute="trailing" id="vUI-4D-O8Q"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.18563680348939601" blue="0.35993102964410928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7vd-m0-Dbr" firstAttribute="leading" secondItem="WU9-2h-s5C" secondAttribute="leading" id="2we-gB-8q3"/>
-                            <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="7vd-m0-Dbr" secondAttribute="bottom" constant="21" id="4EE-Mo-Lda"/>
-                            <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="532" id="4hI-WL-ogX"/>
+                            <constraint firstItem="7vd-m0-Dbr" firstAttribute="leading" secondItem="WU9-2h-s5C" secondAttribute="leading" constant="5" id="2we-gB-8q3"/>
+                            <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="7vd-m0-Dbr" secondAttribute="bottom" constant="104" id="4EE-Mo-Lda"/>
+                            <constraint firstItem="WU9-2h-s5C" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="615" id="4hI-WL-ogX"/>
                             <constraint firstItem="M9R-Lj-VkH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="93Q-pi-eIO"/>
                             <constraint firstItem="7vd-m0-Dbr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="405" id="9JT-Jw-77Z"/>
                             <constraint firstItem="S9v-Q3-ktS" firstAttribute="trailing" secondItem="YTV-E0-pr9" secondAttribute="trailing" id="EZg-d9-Yex"/>
@@ -317,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519.20000000000005" y="39.130434782608695"/>
+            <point key="canvasLocation" x="-520.28985507246375" y="39.130434782608695"/>
         </scene>
         <!--Web Controller-->
         <scene sceneID="FBk-Pc-XCf">
